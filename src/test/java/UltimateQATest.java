@@ -62,16 +62,21 @@ public class UltimateQATest extends PageSetup {
        listOfCars.add("Opel");
        listOfCars.add("Audi");
 
-
        for (int i = 0; i < listOfCars.size(); i++) {
 
            WebElement dropdownOption = driver.findElementByXPath("//*[@value='saab']");
              dropdownOption.click();
              Assertions.assertTrue(dropdownOption.isSelected());
-
        }
+    }
+    @Test
+    public void testSix(){
+       WebElement buttonUsingXpath1 = driver.findElementByXPath("//span[text()='XPath tutorial for automation testers']/ancestor::h4/following-sibling::div//button");
+       buttonUsingXpath1.click();
+
+       WebElement buttonSuccessTest = driver.findElementByClassName("entry-title");
+        Assertions.assertEquals("")
 
     }
-
 
 }
